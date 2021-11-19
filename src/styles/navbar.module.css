@@ -40,8 +40,7 @@ li {
 }
 a {
   text-decoration: none;
-  padding-bottom: 10px;
-  border-bottom: #79bccf 5px solid;
+  padding-bottom: 15px;
 }
 .home,
 .shop,
@@ -56,6 +55,7 @@ a {
 }
 .home {
   color: #79bccf;
+  border-bottom: #79bccf 5px solid;
 }
 .cart {
   margin-top: 18px;
@@ -63,4 +63,29 @@ a {
 }
 a:focus {
   color: #79bccf;
+  border-bottom: #79bccf 5px solid;
+}
+
+/* Small screen */
+@media screen and (max-width: 600px) {
+  nav {
+    padding: 0px 10px;
+  }
+  .log {
+    width: 30px;
+    height: 26px;
+  }
+  .logoName {
+    font-size: 28px;
+  }
+  li {
+    margin: 10px 20px;
+  }
+  .home,
+  .shop,
+  .about {
+    width: 50px;
+    height: 18px;
+    font-size: 15px;
+  }
 }
