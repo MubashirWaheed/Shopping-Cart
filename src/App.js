@@ -14,7 +14,7 @@ function App() {
                adipiscing tincidunt amet vel at. Quis lobortis id. consectetur adipiscing elit. </p>
             <Link to="shop" className={appCss.btn}>Buy Now
               <svg className={appCss.arrow} width="11" height="16" viewBox="0 0 11 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2 2L9 8L2 14" stroke="#79BCCF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 2L9 8L2 14" stroke="#79BCCF" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </Link>
           </div>
@@ -22,13 +22,11 @@ function App() {
         <div className={appCss.right}>
           <img  className={appCss.displayImage}src={require('./assets/jacket.png').default} alt="jacket" />
           <svg  className={appCss.backArrows}width="417" height="516" viewBox="0 0 417 516" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M279.5 365.5L387 258L279.5 150.5" stroke="white" stroke-opacity="0.25" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M147 365.5L254.5 258L147 150.5" stroke="white" stroke-opacity="0.25" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M279.5 365.5L387 258L279.5 150.5" stroke="white" strokeOpacity="0.25" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M147 365.5L254.5 258L147 150.5" stroke="white" strokeOpacity="0.25" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
 
         </div>
-        
-
       </main>
     </div>
   );

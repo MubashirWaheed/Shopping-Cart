@@ -1,8 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import navbarCss from "../styles/navbar.module.css"
+import Sidebar from "./Sidebar";
 
 function Navabar(){
+    // Read about conditional rendering
+    const showSidebar = ()=>{
+        <Sidebar />
+    }
     return(
         <nav>
             <div className={navbarCss.container}>
@@ -18,13 +23,11 @@ function Navabar(){
                         <li><NavLink to="/" className={navbarCss.home}>Home</NavLink></li>
                         <li><NavLink to="/shop" className={navbarCss.shop}>Shop</NavLink></li>
                         <li><NavLink to="/about" className={navbarCss.about}>About</NavLink></li>
-                        <svg className={navbarCss.cart} width="36" height="35" viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg className={navbarCss.cart} onClick={showSidebar} width="36" height="35" viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.6364 32.5454C14.4397 32.5454 15.0909 31.8942 15.0909 31.0909C15.0909 30.2876 14.4397 29.6364 13.6364 29.6364C12.833 29.6364 12.1818 30.2876 12.1818 31.0909C12.1818 31.8942 12.833 32.5454 13.6364 32.5454Z" stroke="#787878" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
                             <path d="M29.6364 32.5454C30.4397 32.5454 31.0909 31.8942 31.0909 31.0909C31.0909 30.2876 30.4397 29.6364 29.6364 29.6364C28.833 29.6364 28.1818 30.2876 28.1818 31.0909C28.1818 31.8942 28.833 32.5454 29.6364 32.5454Z" stroke="#787878" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
                             <path d="M2 2H7.81818L11.7164 21.4764C11.8494 22.146 12.2137 22.7476 12.7455 23.1757C13.2774 23.6038 13.9428 23.8313 14.6255 23.8182H28.7636C29.4463 23.8313 30.1117 23.6038 30.6436 23.1757C31.1754 22.7476 31.5397 22.146 31.6727 21.4764L34 9.27273H9.27273" stroke="#787878" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
-
-                        {/* <li><NavLink to ="/contact">Contact</NavLink></li> */}
                     </ul>
                 </div>
             </div>
