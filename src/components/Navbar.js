@@ -1,15 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 import { NavLink } from "react-router-dom";
 import navbarCss from "../styles/navbar.module.css"
 import Sidebar from "./Sidebar";
 
+
 function Navabar(){
-    // Read about conditional rendering
-    const showSidebar = ()=>{
-        <Sidebar />
-    }
+    const [sidebar, setSidebar] = useState(false);
+    const showSidebar = ()=> setSidebar(!sidebar);
+
     return(
         <nav>
+            <Sidebar className={sidebar ? "main": "hide"} />
             <div className={navbarCss.container}>
                 <div className={`${navbarCss['nav-left']}`}>
                     <svg  className={navbarCss.log} width="36" height="32" viewBox="0 0 36 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,6 +29,7 @@ function Navabar(){
                             <path d="M29.6364 32.5454C30.4397 32.5454 31.0909 31.8942 31.0909 31.0909C31.0909 30.2876 30.4397 29.6364 29.6364 29.6364C28.833 29.6364 28.1818 30.2876 28.1818 31.0909C28.1818 31.8942 28.833 32.5454 29.6364 32.5454Z" stroke="#787878" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
                             <path d="M2 2H7.81818L11.7164 21.4764C11.8494 22.146 12.2137 22.7476 12.7455 23.1757C13.2774 23.6038 13.9428 23.8313 14.6255 23.8182H28.7636C29.4463 23.8313 30.1117 23.6038 30.6436 23.1757C31.1754 22.7476 31.5397 22.146 31.6727 21.4764L34 9.27273H9.27273" stroke="#787878" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
+                        {/* </Link> */}
                     </ul>
                 </div>
             </div>

@@ -1,10 +1,18 @@
-import React from "react"
-import sidebarCss from "../styles/sidebar.module.css"
-function Sidebar(){
-
+import React , {useContext} from "react"
+import '../styles/sidebar.css';
+import { shopContext } from "./ShopContext";
+function Sidebar(props){
+    const products = useContext(shopContext);
     return (
-        <div className={sidebarCss.main}>
-            <h2>Sidebar Component</h2>     
+        <div>
+            <div className={props.className}>
+                {
+                    products.cart.map((item)=>{
+                        return <p>{item.title}</p>
+                    })
+                }
+                <h2>Sidebar Component</h2>     
+            </div>
         </div>
     )
 }
