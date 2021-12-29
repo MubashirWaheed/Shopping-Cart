@@ -6,7 +6,7 @@ import Navabar from "./Navbar";
 import ShopContext from "./ShopContext";
 
 function RouteSwitch(){
-    // const shop = useContext(shopContext)
+
     return(
         <ShopContext>
             <BrowserRouter>
