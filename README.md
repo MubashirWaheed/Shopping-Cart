@@ -1,5 +1,5 @@
 # Shopping cart
 
-This projetc is a small ecomerce website created using React.
+This project is a small ecommerce website created using React.
 
 ![landing page image](public/photos/store.png)
